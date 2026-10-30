@@ -17,7 +17,7 @@ List<Item> itemDeExemplo() => [
     categoria: "Ferramenta", 
     dono: "Felipe Alvarenga", 
     apartamento: "A-201",
-    disponivel: false 
+    disponivel: true 
   ),
   Item(
     id: "3", 
