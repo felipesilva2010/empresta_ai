@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 class TemaemprestaAi {
   static const corSemente = Color(0xFF00447c);
 
-  static const espacoP = 8;
-  static const espacoM = 16;
-  static const espacoG = 24;
+  static const espacoP = 8.0;
+  static const espacoM = 16.0;
+  static const espacoG = 24.0;
 
   static ThemeData claro() => _base(Brightness.light);
   static ThemeData escure() => _base(Brightness.dark);
