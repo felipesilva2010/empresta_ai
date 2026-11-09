@@ -1,5 +1,6 @@
 import 'package:empresta_ai/controllers/itens_controller.dart';
 import 'package:empresta_ai/controllers/sessao_controlle.dart';
+import 'package:empresta_ai/view/itens_view.dart';
 import 'package:empresta_ai/view/perfil_view.dart';
 import 'package:flutter/material.dart';
 
@@ -20,7 +21,7 @@ class _InicioViewState extends State<InicioView> {
   @override
   Widget build(BuildContext context) {
     final abas = [
-      const Center(child: Text('Lista de itens: chega na issue #6')),
+      ItensView(controller: widget.itens),
       const Center(child: Text('Meus pedidos: chega na issue #8')),
       PerfilView(sessao: widget.sessao),
     ];
