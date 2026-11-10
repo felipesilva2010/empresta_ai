@@ -1,7 +1,7 @@
 import 'package:empresta_ai/theme/tema.dart';
 import 'package:empresta_ai/widgets/item_card.dart';
 import 'package:flutter/material.dart';
-
+import 'item_detalhe_view.dart';
 import '../controllers/itens_controller.dart';
 
 /// Lista de itens disponíveis no condomínio, com busca (Aulas 9 e 11).
@@ -60,14 +60,12 @@ class ItensView extends StatelessWidget {
                       itemBuilder: (context, i) => ItemCard(
                         item: itens[i],
                         // Provisório: a tela de detalhe chega na issue #7.
-                        aoTocar: () =>
-                            ScaffoldMessenger.of(context).showSnackBar(
-                              SnackBar(
-                                content: Text(
-                                  'Detalhe de ${itens[i].nome}: issue #7',
-                                ),
-                              ),
-                            ),
+                        aoTocar: () => Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (_) => ItemDetalheView(
+                              item: itens[i], controller: controller))
+                        )
+                            
                       ),
                     ),
             ),
