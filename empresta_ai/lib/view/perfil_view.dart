@@ -1,12 +1,11 @@
-
-
 import 'package:empresta_ai/controllers/sessao_controlle.dart';
 import 'package:empresta_ai/theme/tema.dart';
 import 'package:flutter/material.dart';
 
-/// Dados do morador e meu secundário (ajuda, Regras).
+
+/// Dados do morador e menu secundário (Ajuda, Regras).
 class PerfilView extends StatelessWidget {
-const PerfilView({super.key, required this.sessao});
+  const PerfilView({super.key, required this.sessao});
 
   final SessaoController sessao;
 
@@ -20,11 +19,15 @@ const PerfilView({super.key, required this.sessao});
         const CircleAvatar(radius: 40, child: Icon(Icons.person, size: 40)),
         const SizedBox(height: TemaemprestaAi.espacoM),
         Text(
-          'Apartamentto $apartamento',
+          'Apartamento $apartamento',
           textAlign: TextAlign.center,
           style: textos.titleLarge,
         ),
         const SizedBox(height: TemaemprestaAi.espacoG),
+        const ListTile(
+          leading: Icon(Icons.help_outline),
+          title: Text('Ajuda'),
+        ),
         const ListTile(
           leading: Icon(Icons.description_outlined),
           title: Text('Regras de uso do condomínio'),
@@ -33,4 +36,3 @@ const PerfilView({super.key, required this.sessao});
     );
   }
 }
-
