@@ -9,7 +9,7 @@ void main() {
     await tester.pumpWidget(const EmpertaAiApp());
     await tester.tap(find.text('Entrar'));
     await tester.pump();
-    expect(find.text('Informe seu bloco e apartamento.'), findsOneWidget);
+    expect(find.text('Informe o bloco e apartamento.'), findsOneWidget);
   });
 
   testWidgets('Entrar mostra a lista de itens', (tester) async {
